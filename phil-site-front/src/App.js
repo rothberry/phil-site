@@ -1,21 +1,43 @@
+/*eslint-disable */
 import React from "react"
-import { Image } from "semantic-ui-react"
 import "./App.css"
-import Nav from './components/Nav'
-// import { Router, Route, withRouter, Switch, Redirect } from "react-router-dom"
+import Nav from "./components/Nav"
+import profPic from "./images/prof-pic.jpg"
+import HomeContainer from "./containers/HomeContainer"
+import ProjectContainer from "./containers/ProjectContainer"
+import ResumeContainer from "./containers/ResumeContainer"
+import { Router, Route, withRouter, Switch, Redirect } from "react-router-dom"
 
-const profPic = '/home/phil/dev/projects/phil-site/phil-site-front/src/assets/prof-pic.jpg'
-const rothberryPic = 'phil-site-front/src/assets/rothberry.jpg'
+const links = {
+  soundcloud: "https://soundcloud.com/rothberry",
+  twitter: "https://twitter.com/rothberry_",
+  linkedIn: "https://www.linkedin.com/in/philroth77/",
+  github: "https://github.com/rothberry",
+  website: "phil-roth.com",
+  gmail: "mailto:phil.roth077@gmail.com",
+  retroJS: "https://retrojs-frontend.herokuapp.com/"
+}
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Nav />
-      <Image src={profPic} circular alt='profile pic' />
-      <h1>Full Name</h1>
-      <h1>Software Engineer</h1>
-      <h1>About me</h1>
-      <h1>Socials (to the right or bottom)</h1>
+      <br />
+      <br />
+      <br />
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={() => <HomeContainer links={links} profPic={profPic} />}
+        />
+        <Route
+          exact
+          path="/projects"
+          render={() => <ProjectContainer links={links} />}
+        />
+        <Route path="/resume" component={ResumeContainer} />
+      </Switch>
     </div>
   )
 }

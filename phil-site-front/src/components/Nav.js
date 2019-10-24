@@ -1,53 +1,62 @@
 import React, { Component } from "react"
-import { Menu, Image, Container } from "semantic-ui-react"
-// import { Link } from "react-router-dom"
+import { Menu, Icon, Container } from "semantic-ui-react"
+import { withRouter } from "react-router-dom"
 
 class Nav extends Component {
   state = {
-    activeItem: "home"
+    activeItem: ""
   }
 
   handleItemClick = (e, { name }) => {
     this.setState({ activeItem: name })
+    this.props.history.push(`/${name}`)
   }
 
   render() {
     const { activeItem } = this.state
+    const styleNav = { height: "5%" }
+    const styleHome = {}
     return (
-      <Menu fixed="top" pointing>
+      <Menu fixed="top" size="large" style={styleNav} color='blue' inverted>
         <Container>
           <Menu.Item
             as="a"
             header
-            name="home"
-            active={activeItem === "home"}
+            name=""
+            align="center"
+            active={activeItem === ""}
             onClick={this.handleItemClick}
+            style={styleHome}
           >
-            {/* <Image
-              size="mini"
-              src="../assets/rothberry.jpg"
-              style={{ marginRight: "1.5em" }}
-            /> */}
             Phil Roth
           </Menu.Item>
-          <Menu.Item
+          {/* <Menu.Item
             as="a"
             header
             name="blog"
-            position="right"
             active={activeItem === "blog"}
             onClick={this.handleItemClick}
-          >
+            >
             Blog
-          </Menu.Item>
+          </Menu.Item> */}
           <Menu.Item
             as="a"
             header
+            position="right"
             name="projects"
             active={activeItem === "projects"}
             onClick={this.handleItemClick}
           >
             Projects
+          </Menu.Item>
+          <Menu.Item
+            as="a"
+            header
+            name="resume"
+            active={activeItem === "resume"}
+            onClick={this.handleItemClick}
+          >
+            Resume
           </Menu.Item>
         </Container>
       </Menu>
@@ -55,4 +64,4 @@ class Nav extends Component {
   }
 }
 
-export default Nav
+export default withRouter(Nav)
