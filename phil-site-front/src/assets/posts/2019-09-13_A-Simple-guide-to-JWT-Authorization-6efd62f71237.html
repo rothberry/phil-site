@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>A Simple guide to JWT Authorization</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">A Simple guide to JWT Authorization</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Guide to JWT Authorization
+</section>
+<section data-field="body" class="e-content">
+<section name="61ba" class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="ebb0" id="ebb0" class="graf graf--h3 graf--leading graf--title">A Simple guide to JWT Authorization</h3><p name="aeb6" id="aeb6" class="graf graf--p graf-after--h3">Let’s walk-through a basic Social Media app:</p><p name="8917" id="8917" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">Step One</strong>: You log into the app or if you aren’t a already on the app, it will probably ask you to sign up.</p><p name="f7bd" id="f7bd" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">Step Two</strong>: You can now enjoy all the fun of social media!</p><p name="b96d" id="b96d" class="graf graf--p graf-after--p">But wait, that can’t be it… How does the app know it’s still you even if you’ve clicked through hundreds of pages?</p><figure name="3590" id="3590" class="graf graf--figure graf-after--p graf--trailing"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 394px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 56.3%;"></div><img class="graf-image" data-image-id="1*aKxfrwQhexd9gsYWiBHFJw.jpeg" data-width="800" data-height="450" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*aKxfrwQhexd9gsYWiBHFJw.jpeg"></div><figcaption class="imageCaption">But how does the app know you are who you say you are…</figcaption></figure></div></div></section><section name="9de6" class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><p name="f52a" id="f52a" class="graf graf--p graf--leading">A common standard is to <strong class="markup--strong markup--p-strong">JWT Authorization</strong>.</p><h4 name="44aa" id="44aa" class="graf graf--h4 graf-after--p">What is a JWT?</h4><p name="4dab" id="4dab" class="graf graf--p graf-after--h4">A JWT is a <strong class="markup--strong markup--p-strong">JSON Web Token</strong> that is created for you on the server side whenever an authorized user tries to enter your app.</p><blockquote name="093f" id="093f" class="graf graf--blockquote graf-after--p">JWT that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the <strong class="markup--strong markup--blockquote-strong">HMAC</strong> algorithm) or a public/private key pair using <strong class="markup--strong markup--blockquote-strong">RSA</strong> or <strong class="markup--strong markup--blockquote-strong">ECDSA</strong>. {1}</blockquote><p name="2958" id="2958" class="graf graf--p graf-after--blockquote">It’s as if you sign a paper when you log in, and whenever you want to look at something new, you must present that paper or the server won’t allow you to see it!</p><p name="3ede" id="3ede" class="graf graf--p graf-after--p">The JWT consists of:</p><ul class="postList"><li name="cc38" id="cc38" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">Header</strong></li><li name="b373" id="b373" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Payload</strong></li><li name="6e18" id="6e18" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Signature</strong></li></ul><blockquote name="80ca" id="80ca" class="graf graf--blockquote graf-after--li"><strong class="markup--strong markup--blockquote-strong">xxxxxxx.yyyyyyy.zzzzzzz</strong></blockquote><h4 name="41de" id="41de" class="graf graf--h4 graf-after--blockquote">Header</h4><p name="78bd" id="78bd" class="graf graf--p graf-after--h4">Let’s break this down. The <strong class="markup--strong markup--p-strong">Header</strong>, or the <strong class="markup--strong markup--p-strong"><em class="markup--em markup--p-em">(x)’s,</em></strong><em class="markup--em markup--p-em"> </em>are where the signing algorithm are being used. The Hash-Based Message Authentication Codes (<strong class="markup--strong markup--p-strong">HMACs</strong>) is the most common algorithm for JWTs. This algorithm uses a <strong class="markup--strong markup--p-strong">key</strong> and the <strong class="markup--strong markup--p-strong">message</strong> to provide a fairly strong defense against interference. Other less common ways to encrypt the JWT include, but are not limited to, the Rivest-Shamir-Adleman (<strong class="markup--strong markup--p-strong">RSA</strong>) and the Elliptic Curve Digital Signature Algorithm (<strong class="markup--strong markup--p-strong">ECDSA</strong>) are much more complex algorithm’s.</p><p name="fcbf" id="fcbf" class="graf graf--p graf-after--p">An example of a Header:</p><pre name="5072" id="5072" class="graf graf--pre graf-after--p">{<br>  &#39;alg&#39;: &#39;HS256&#39;,<br>  &#39;typ&#39;: &#39;JWT&#39;<br>}</pre><h4 name="73b4" id="73b4" class="graf graf--h4 graf-after--pre">Payload</h4><p name="4dc2" id="4dc2" class="graf graf--p graf-after--h4">The <strong class="markup--strong markup--p-strong">Payload</strong>, or the<strong class="markup--strong markup--p-strong"> <em class="markup--em markup--p-em">(y)’s</em></strong><em class="markup--em markup--p-em">, </em>contains all the claims that the user is authorized to see, all the public and private claims that the user is authorized to see. For example, if the current user is an admin, or if there is different levels of users, like paid versus free users.</p><p name="cf58" id="cf58" class="graf graf--p graf-after--p">An example of a Payload:</p><pre name="487f" id="487f" class="graf graf--pre graf-after--p">{<br>  &#39;name&#39;: &#39;John Cena&#39;,<br>  &#39;admin&#39;: true<br>}</pre><h4 name="d92a" id="d92a" class="graf graf--h4 graf-after--pre">Signature</h4><p name="ae34" id="ae34" class="graf graf--p graf-after--h4">The <strong class="markup--strong markup--p-strong">Payload</strong>, or the <strong class="markup--strong markup--p-strong"><em class="markup--em markup--p-em">(z)’s</em></strong><em class="markup--em markup--p-em">,</em> is created based on the the algorithm that was chosen from the header and uses that algorithm to digitally <strong class="markup--strong markup--p-strong"><em class="markup--em markup--p-em">sign</em></strong> your token.</p><h4 name="c70c" id="c70c" class="graf graf--h4 graf-after--p">The final steps</h4><p name="3d9a" id="3d9a" class="graf graf--p graf-after--h4">We’ve got the <strong class="markup--strong markup--p-strong">Header, Payload, </strong>and now the <strong class="markup--strong markup--p-strong">Signature, </strong>what’s it look like now? (To test this yourself, go to <a href="https://jwt.io/" data-href="https://jwt.io/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">https://jwt.io/</a>) Using the example code above</p><pre name="291f" id="291f" class="graf graf--pre graf-after--p">haeder = { &#39;alg&#39;: &#39;HS256&#39;, &#39;typ&#39;: &quot;JWT&#39; }       <br>payload = { &#39;name&#39;: &#39;John Cena&#39;, &#39;admin&#39;: true }<br>HMACSHA256(<br>  base64UrlEncode(header) + &quot;.&quot; +<br>  base64UrlEncode(payload),<br>  &#39;its-john-cena!!!&#39; // Your 256 bit secret message<br>)</pre><blockquote name="30b9" id="30b9" class="graf graf--blockquote graf-after--pre">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSm9obiBDZW5hIiwiYWRtaW4iOnRydWV9.QDP5p-KZ4kXD9MqYOuuY72lUT5txfd1IUnYtW5IdBw8</blockquote><p name="fb63" id="fb63" class="graf graf--p graf-after--blockquote">Now take that token with you and enjoy the rest of your social media experience.</p><figure name="9908" id="9908" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 480px; max-height: 360px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 75%;"></div><img class="graf-image" data-image-id="1*P_yVP_WYhcKtxRx2-C0SmA.gif" data-width="480" data-height="360" src="https://cdn-images-1.medium.com/max/800/1*P_yVP_WYhcKtxRx2-C0SmA.gif"></div></figure><p name="d7b2" id="d7b2" class="graf graf--p graf-after--figure">Resource Links:</p><ol class="postList"><li name="b9c4" id="b9c4" class="graf graf--li graf-after--p"><a href="https://jwt.io/introduction/" data-href="https://jwt.io/introduction/" class="markup--anchor markup--li-anchor" rel="noopener" target="_blank">https://jwt.io/introduction/</a></li><li name="7d13" id="7d13" class="graf graf--li graf-after--li"><a href="https://auth0.com/blog/json-web-token-signing-algorithms-overview/" data-href="https://auth0.com/blog/json-web-token-signing-algorithms-overview/" class="markup--anchor markup--li-anchor" rel="noopener" target="_blank">https://auth0.com/blog/json-web-token-signing-algorithms-overview/</a></li><li name="f30e" id="f30e" class="graf graf--li graf-after--li graf--trailing"><a href="https://jwt.io/" data-href="https://jwt.io/" class="markup--anchor markup--li-anchor" rel="noopener" target="_blank">https://jwt.io/</a></li></ol></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@phil.roth077" class="p-author h-card">Phil Roth</a> on <a href="https://medium.com/p/6efd62f71237"><time class="dt-published" datetime="2019-09-13T14:58:23.745Z">September 13, 2019</time></a>.</p><p><a href="https://medium.com/@phil.roth077/a-simple-guide-to-jwt-authorization-6efd62f71237" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on October 25, 2019.</p></footer></article></body></html>

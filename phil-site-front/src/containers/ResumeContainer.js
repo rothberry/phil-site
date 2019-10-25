@@ -1,3 +1,4 @@
+/*eslint-disable */
 import React from 'react';
 import { Document } from "react-pdf";
 // import resumePDF from '../assets/Phil Roth Software Resume.pdf'
