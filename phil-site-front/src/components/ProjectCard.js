@@ -1,6 +1,6 @@
 /*eslint-disable */
 import React from "react"
-import { Image, Card } from "semantic-ui-react"
+import { Image, Card, Header } from "semantic-ui-react"
 
 const ProjectCard = props => {
   const {
@@ -27,7 +27,7 @@ const ProjectCard = props => {
   let cardLinks
   if (!!isSplit && !!isLive) {
     cardLinks = (
-      <Card.Meta>
+      <Card.Meta textAlign='center'>
         {frontLink}
         {" | "}
         {backLink}
@@ -37,7 +37,7 @@ const ProjectCard = props => {
     )
   } else if (!!isSplit && !isLive) {
     cardLinks = (
-      <Card.Meta>
+      <Card.Meta textAlign='center'>
         {frontLink}
         {" | "}
         {backLink}
@@ -47,7 +47,7 @@ const ProjectCard = props => {
     )
   } else if (!isSplit && !!isLive) {
     cardLinks = (
-      <Card.Meta>
+      <Card.Meta textAlign='center'>
         {gitLink}
         {" | "}
         {liveAppLink}
@@ -55,7 +55,7 @@ const ProjectCard = props => {
     )
   } else if (!isSplit && !isLive) {
     cardLinks = (
-      <Card.Meta>
+      <Card.Meta textAlign='center'>
         {gitLink}
         {" | "}
         {liveDemoLink}
@@ -63,26 +63,26 @@ const ProjectCard = props => {
     )
   }
 
-  const styleCard = {}
-  const styleCardImage = {}
+  const styleCard = {width: '%', height: '%', backgroundColor: '#e4eaf3'}
+  // const styleCardImage = {width: '10%', height: '10%'}
   // const styleCard = {width: '600px', height: '600px'}
+  //? c1: '#ffffff',
+  //? c2: '#e4eaf3',
+  //? c3: '#efe9e5',
+  //? c4: '#c6aa99',
+  //? c5: '#3a3836',
+
   return (
     <Card raised style={styleCard} rounded>
       <Image
-        style={{ styleCardImage }}
-        // size='massive'
-        rounded
+        // style={{ styleCardImage }}
         className={`proj-${details.name}`}
-        fluid
-        // as="a"
-        // href={liveApp}
         src={pic}
         wrapped
-        ui={false}
+        ui={true}
       />
       <Card.Content>
-        <Card.Header>{details.name}</Card.Header>
-        {/* <Card.Meta>{cardLinks}</Card.Meta> */}
+        <Header as='h2' textAlign='center'>{details.name}</Header>
         {cardLinks}
         <Card.Description>{details.desc}</Card.Description>
       </Card.Content>

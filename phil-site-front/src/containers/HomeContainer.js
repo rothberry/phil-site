@@ -1,15 +1,20 @@
 /*eslint-disable */
 import React from "react"
-import { Image, Segment, Header, Icon, Grid, List } from "semantic-ui-react"
+import { Image, Segment, Header, Icon, Grid, List, Container } from "semantic-ui-react"
 import { Link } from "react-router-dom"
 
 const HomeContainer = props => {
   const { links, profPic, hexColors } = props
-  const { color1, color2, color3, color4, color5 } = hexColors
-  const styleSegment = { backgroundColor: {color5}, margin: "0% 5%" }
+  // const { c1, c2, c3, c4, c5 } = hexColors
+  // c1: '#ffffff',
+  // c2: '#e4eaf3',
+  // c3: '#efe9e5',
+  // c4: '#c6aa99',
+  // c5: '#3a3836',
+  const styleCont = { margin: "10% 5%" }
   return (
     <div className="home-container">
-      <Segment raised rounded style={styleSegment}>
+      <Container fluid style={styleCont}>
         <Image
           src={profPic}
           circular
@@ -21,10 +26,10 @@ const HomeContainer = props => {
         <Header as="h1" textAlign="center">
           Phil Roth
         </Header>
-        <Header as="h2" textAlign="center">
-          Software Engineer
+        <Header as="h4" textAlign="center">
+        Software Engineer, Ruby, JavaScript, Linux.
         </Header>
-      </Segment>
+      </Container>
       <Grid style={{ margin: "0% 10%" }}>
         <Grid.Row columns={3}>
           <Grid.Column width="10">
@@ -69,12 +74,21 @@ const HomeContainer = props => {
                 <Icon name="linkedin" size="big" />
                 LinkedIn
               </List.Item>
+              {/* <List.Item as="a" href={links.soundcloud}>
+                <Icon name="soundcloud" size="big" />
+                SoundCloud
+              </List.Item> */}
               <List.Item as="a" href={links.gmail}>
                 <Icon name="mail" size="big" />
                 Email
               </List.Item>
-              <List.Item as='a' href='https://drive.google.com/open?id=1Zg42il292S7Dfs-DptOXzJd_yOi5bg5Z' download>
-                <Icon name='paperclip' size='big' />
+
+              <List.Item
+                as="a"
+                href="https://drive.google.com/open?id=1Zg42il292S7Dfs-DptOXzJd_yOi5bg5Z"
+                download
+              >
+                <Icon name="paperclip" size="big" />
                 Resume
               </List.Item>
             </List>

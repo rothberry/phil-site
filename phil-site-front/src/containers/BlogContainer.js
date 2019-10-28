@@ -27,6 +27,12 @@ const blogList = [
 const mappedBlogList = blogList.map(blog => {
   return <BlogCard blog={blog} />
 })
+// c1: '#ffffff',
+// c2: '#e4eaf3',
+// c3: '#efe9e5',
+// c4: '#c6aa99',
+// c5: '#3a3836',
+
 const styleList = {}
 const BlogContainer = () => {
   return (

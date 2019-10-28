@@ -3,9 +3,9 @@ import React from "react"
 import { Image, Icon, Card, Header } from "semantic-ui-react"
 import ProjectCard from "../components/ProjectCard"
 import retroJSPic from "../images/retroJS.png"
-// import audioPhilesPic from "../images/audioPhiles.png"
-const audioPhilesPic =
-  "https://library.kissclipart.com/20180919/pww/kissclipart-sound-wave-vector-clipart-sound-wave-79091298684b3993.png"
+import audioPhilesPic from "../images/audioPhiles.png"
+// const audioPhilesPic =
+//   "https://library.kissclipart.com/20180919/pww/kissclipart-sound-wave-vector-clipart-sound-wave-79091298684b3993.png"
 import teamLunchPic from "../images/teamLunchOne.png"
 
 const projectDetails = {
