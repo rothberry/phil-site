@@ -1,6 +1,6 @@
 /*eslint-disable */
 import React from "react"
-import { Lis, ListtList, List } from "semantic-ui-react"
+import { Header, List } from "semantic-ui-react"
 
 const blogList = [
   {
@@ -35,16 +35,19 @@ const mappedBlogList = blogList.map(blog => {
 })
 const BlogContainer = () => {
   return (
-    <List
-      className="blog-list-container"
-      size="large"
-      divided
-      verticalAlign='middle'
-      floated="left"
-      textAlign="left"
-    >
-      {mappedBlogList}
-    </List>
+    <div className="blog-container">
+      <Header size="huge">Blog</Header>
+      <List
+        className="blog-list-container"
+        size="large"
+        divided
+        verticalAlign="middle"
+        floated="left"
+        textAlign="left"
+      >
+        {mappedBlogList}
+      </List>
+    </div>
   )
 }
 

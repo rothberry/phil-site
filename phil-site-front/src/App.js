@@ -8,6 +8,7 @@ import HomeContainer from "./containers/HomeContainer"
 import ProjectContainer from "./containers/ProjectContainer"
 import BlogContainer from "./containers/BlogContainer"
 import { Router, Route, withRouter, Switch, Redirect } from "react-router-dom"
+import { Header } from "semantic-ui-react"
 
 const links = {
   soundcloud: "https://soundcloud.com/rothberry",
@@ -26,8 +27,23 @@ const links = {
   audioPhilesBack: 'https://github.com/rothberry/mod-5-audiofiles-backend',
   audioPhilesLiveDemo: undefined,
 
-
 }
+
+const hexColors = {
+  // * TROPICS https://www.color-hex.com/color-palette/84382
+  // color1: '#ffad4f',
+  // color2: '#72a689',
+  // color3: '#607b60',
+  // color4: '#44614a',
+  // color5: '#191b25',
+  // * OPEHLIA https://www.color-hex.com/color-palette/84361
+  color1: '#ffffff',
+  color2: '#e4eaf3',
+  color3: '#efe9e5',
+  color4: '#c6aa99',
+  color5: '#3a3836',
+}
+
 
 const App = () => {
   return (
@@ -36,6 +52,17 @@ const App = () => {
       <br />
       <br />
       <br />
+      {/* SCROLLING PAGE */}
+      {/* <HomeContainer links={links} profPic={profPic} />
+      <br />
+      <br />
+      <br />
+      <ProjectContainer links={links} />
+      <br />
+      <br />
+      <br />
+      <BlogContainer /> */}
+
       <Switch>
         <Route
           exact
