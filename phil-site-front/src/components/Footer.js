@@ -1,3 +1,4 @@
+/*eslint-disable */
 import React, { Component } from "react"
 import { Menu, Icon, Container, Sticky } from "semantic-ui-react"
 

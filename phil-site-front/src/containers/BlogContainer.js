@@ -1,6 +1,7 @@
 /*eslint-disable */
 import React from "react"
 import { Header, List } from "semantic-ui-react"
+import BlogCard from "../components/BlogCard"
 
 const blogList = [
   {
@@ -24,26 +25,23 @@ const blogList = [
 ]
 
 const mappedBlogList = blogList.map(blog => {
-  return (
-    <List.Item>
-      <List.Header as="a" href={blog.link}>
-        {blog.title}
-      </List.Header>
-      <List.Description>{blog.desc}</List.Description>
-    </List.Item>
-  )
+  return <BlogCard blog={blog} />
 })
+const styleList = {}
 const BlogContainer = () => {
   return (
     <div className="blog-container">
-      <Header size="huge">Blog</Header>
+      <Header size="huge" textAlign="center">
+        Blog Posts
+      </Header>
       <List
+        bulleted
         className="blog-list-container"
         size="large"
-        divided
-        verticalAlign="middle"
+        // verticalAlign="middle"
         floated="left"
         textAlign="left"
+        style={styleList}
       >
         {mappedBlogList}
       </List>

@@ -32,7 +32,7 @@ const ProjectContainer = props => {
   const styleCardGroup = { margin: "1% 10%" }
   return (
     <div className="project-container">
-      <Header size='huge'>Projects</Header>
+      <Header textAlign='center' as='h1'>Projects</Header>
       <Card.Group
         className="project-group"
         itemsPerRow={2}

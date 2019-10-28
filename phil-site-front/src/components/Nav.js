@@ -15,10 +15,14 @@ class Nav extends Component {
 
   render() {
     const { activeItem } = this.state
-    const styleNav = { height: "5%" }
+    const styleNav = {
+      height: "5%",
+      fontFamily: "Courier New",
+      backgroundColor: '#efe9e5'
+    }
     const styleHome = {}
     return (
-      <Menu fixed="top" size="large" style={styleNav} color='black' inverted>
+      <Menu fixed="top" size="large" style={styleNav}>
         <Container>
           <Menu.Item
             as="a"
@@ -38,7 +42,7 @@ class Nav extends Component {
             position="right"
             active={activeItem === "blog"}
             onClick={this.handleItemClick}
-            >
+          >
             Blog
           </Menu.Item>
           <Menu.Item
@@ -50,7 +54,7 @@ class Nav extends Component {
           >
             Projects
           </Menu.Item>
-          <Menu.Item
+          {/* <Menu.Item
             as="a"
             header
             name="resume"
@@ -58,7 +62,7 @@ class Nav extends Component {
             onClick={this.handleItemClick}
           >
             Resume
-          </Menu.Item>
+          </Menu.Item> */}
         </Container>
       </Menu>
     )

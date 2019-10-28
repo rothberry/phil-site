@@ -31,24 +31,24 @@ const links = {
 
 const hexColors = {
   // * TROPICS https://www.color-hex.com/color-palette/84382
-  // color1: '#ffad4f',
-  // color2: '#72a689',
-  // color3: '#607b60',
-  // color4: '#44614a',
-  // color5: '#191b25',
+  // c1: '#ffad4f',
+  // c2: '#72a689',
+  // c3: '#607b60',
+  // c4: '#44614a',
+  // c5: '#191b25',
   // * OPEHLIA https://www.color-hex.com/color-palette/84361
-  color1: '#ffffff',
-  color2: '#e4eaf3',
-  color3: '#efe9e5',
-  color4: '#c6aa99',
-  color5: '#3a3836',
+  c1: '#ffffff',
+  c2: '#e4eaf3',
+  c3: '#efe9e5',
+  c4: '#c6aa99',
+  c5: '#3a3836',
 }
 
 
 const App = () => {
   return (
     <div className="App">
-      <Nav />
+      <Nav hexColors={hexColors}/>
       <br />
       <br />
       <br />
@@ -67,7 +67,7 @@ const App = () => {
         <Route
           exact
           path="/"
-          render={() => <HomeContainer links={links} profPic={profPic} />}
+          render={() => <HomeContainer links={links} profPic={profPic} hexColors={hexColors} />}
         />
         <Route
           exact
