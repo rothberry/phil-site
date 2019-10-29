@@ -28,7 +28,6 @@ const projectDetails = {
 
 const ProjectContainer = props => {
   const { links } = props
-  // TODO Add Project component(s) mapped
   const styleCardGroup = { margin: "1% 10%" }
   return (
     <div className="project-container">

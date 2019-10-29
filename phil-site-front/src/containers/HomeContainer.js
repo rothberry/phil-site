@@ -1,6 +1,14 @@
 /*eslint-disable */
 import React from "react"
-import { Image, Segment, Header, Icon, Grid, List, Container } from "semantic-ui-react"
+import {
+  Image,
+  Segment,
+  Header,
+  Icon,
+  Grid,
+  List,
+  Container
+} from "semantic-ui-react"
 import { Link } from "react-router-dom"
 
 const HomeContainer = props => {
@@ -14,7 +22,7 @@ const HomeContainer = props => {
   const styleCont = { margin: "10% 5%" }
   return (
     <div className="home-container">
-      <Container fluid style={styleCont}>
+      <Container style={styleCont}>
         <Image
           src={profPic}
           circular
@@ -26,8 +34,8 @@ const HomeContainer = props => {
         <Header as="h1" textAlign="center">
           Phil Roth
         </Header>
-        <Header as="h4" textAlign="center">
-        Software Engineer, Ruby, JavaScript, Linux.
+        <Header as="h3" textAlign="center">
+          Software Engineer, Ruby, JavaScript, Linux.
         </Header>
       </Container>
       <Grid style={{ margin: "0% 10%" }}>

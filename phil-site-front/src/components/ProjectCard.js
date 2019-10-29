@@ -63,9 +63,7 @@ const ProjectCard = props => {
     )
   }
 
-  const styleCard = {width: '%', height: '%', backgroundColor: '#e4eaf3'}
-  // const styleCardImage = {width: '10%', height: '10%'}
-  // const styleCard = {width: '600px', height: '600px'}
+  const styleCard = {backgroundColor: '#e4eaf3'}
   //? c1: '#ffffff',
   //? c2: '#e4eaf3',
   //? c3: '#efe9e5',
@@ -75,7 +73,6 @@ const ProjectCard = props => {
   return (
     <Card raised style={styleCard} rounded>
       <Image
-        // style={{ styleCardImage }}
         className={`proj-${details.name}`}
         src={pic}
         wrapped
