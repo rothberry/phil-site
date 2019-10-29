@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ccdd2a37.chunk.css",
+    "main.js": "/static/js/main.b3266057.chunk.js",
+    "main.js.map": "/static/js/main.b3266057.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.aac5840e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.aac5840e.js.map",
+    "static/js/2.cd9fb28b.chunk.js": "/static/js/2.cd9fb28b.chunk.js",
+    "static/js/2.cd9fb28b.chunk.js.map": "/static/js/2.cd9fb28b.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.9d4618a0c99f672a1e978a42cefa240a.js": "/precache-manifest.9d4618a0c99f672a1e978a42cefa240a.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.ccdd2a37.chunk.css.map": "/static/css/main.ccdd2a37.chunk.css.map",
+    "static/media/ctrlD-1.png": "/static/media/ctrlD-1.3d7aedd9.png",
+    "static/media/dot-grid.png": "/static/media/dot-grid.5a69c256.png",
+    "static/media/jwt-spiderman.jpg": "/static/media/jwt-spiderman.ec4c229c.jpg",
+    "static/media/prof-pic.jpg": "/static/media/prof-pic.d88e5f67.jpg",
+    "static/media/retroJS.png": "/static/media/retroJS.99679009.png",
+    "static/media/sessions_num_correct.png": "/static/media/sessions_num_correct.2c019d8d.png",
+    "static/media/teamLunchOne.png": "/static/media/teamLunchOne.8f842323.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aac5840e.js",
+    "static/js/2.cd9fb28b.chunk.js",
+    "static/css/main.ccdd2a37.chunk.css",
+    "static/js/main.b3266057.chunk.js"
+  ]
+}
