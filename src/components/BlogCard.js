@@ -1,6 +1,6 @@
 /*eslint-disable */
 import React from "react"
-import { Card, Image, Header, List } from "semantic-ui-react"
+import { Card, Image, Header, List, Divider } from "semantic-ui-react"
 
 const BlogCard = props => {
   const { blog } = props
@@ -11,7 +11,7 @@ const BlogCard = props => {
 
   return (
     // ! AS LIST
-    <List.Item style={{ margin: "5% 0" }}>
+    <List.Item style={{ margin: "3% 0" }}>
       <List.Header as="h2">{title}</List.Header>
       <List.List>
         <List.Description>{desc}</List.Description>
@@ -19,7 +19,7 @@ const BlogCard = props => {
           Link to Post
         </List.Item>
       </List.List>
-      <hr />
+      <Divider horizontal>*</Divider>
     </List.Item>
 
     // ! AS CARDS

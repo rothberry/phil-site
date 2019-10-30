@@ -12,7 +12,8 @@ const blogList = [
     link:
       "https://medium.com/@phil.roth077/a-simple-guide-to-jwt-authorization-6efd62f71237",
     title: "A Simple guide to JWT Authorization",
-    desc: "Walkthrough of what a JSON Web Token is and how to use it on the client-side.",
+    desc:
+      "Walkthrough of what a JSON Web Token is and how to use it on the client-side.",
     pic: jwtPic
   },
   {
@@ -40,16 +41,14 @@ const mappedBlogList = blogList.map(blog => {
 // c4: '#c6aa99',
 // c5: '#3a3836',
 
-const styleBlog = { margin: "1% 10%" }
-const BlogContainer = (props) => {
-  const {links} = props
+// const styleBlog = { margin: "0% 10%" }
+const styleCont = { margin: "1% 10%" }
+const BlogContainer = props => {
+  const { links } = props
   return (
-    <Container className="blog-container">
+    <Container className="blog-container" style={styleCont}>
       <Header size="huge" textAlign="center">
         Blog Posts
-      </Header>
-      <Header size='small' as='a' href={links.blog}>
-        Link to My Medium
       </Header>
       {/* AS CARDS */}
       {/* <Card.Group
@@ -62,10 +61,7 @@ const BlogContainer = (props) => {
         {mappedBlogList}
       </Card.Group> */}
       {/* AS LIST */}
-      <List
-        className="blog-list-container"
-        floated='left'
-      >
+      <List className="blog-list-container" floated="left">
         {mappedBlogList}
       </List>
     </Container>

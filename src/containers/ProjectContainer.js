@@ -1,6 +1,6 @@
 /*eslint-disable */
 import React from "react"
-import { Image, Icon, Card, Header } from "semantic-ui-react"
+import { Card, Header, Divider, Container } from "semantic-ui-react"
 import ProjectCard from "../components/ProjectCard"
 import retroJSPic from "../images/retroJS.png"
 import audioPhilesPic from "../images/audioPhiles.png"
@@ -28,16 +28,19 @@ const projectDetails = {
 
 const ProjectContainer = props => {
   const { links } = props
-  const styleCardGroup = { margin: "1% 10%" }
+  const styleCardGroup = { margin: "1% 7%" }
+  const styleCont = { margin: "1% 10%" }
   return (
-    <div className="project-container">
-      <Header textAlign='center' as='h1'>Projects</Header>
+    <Container className="project-container" style={styleCont}>
+      <Header textAlign="center" size='huge'>
+        Projects
+      </Header>
       <Card.Group
         className="project-group"
         itemsPerRow={2}
         textAlign="center"
         centered
-        style={styleCardGroup}
+        // style={styleCardGroup}
       >
         {/* RETROJS */}
         <ProjectCard
@@ -72,7 +75,9 @@ const ProjectContainer = props => {
           liveDemo={links.teamLunchLiveDemo}
         />
       </Card.Group>
-    </div>
+      <br />
+      <Divider horizontal>*</Divider>
+    </Container>
   )
 }
 

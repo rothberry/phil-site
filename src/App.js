@@ -62,7 +62,7 @@ const App = () => {
       <br />
       <br />
       <br />
-      <BlogContainer /> */}
+      <BlogContainer links={links} /> */}
 
       <Switch>
         <Route
@@ -87,8 +87,6 @@ const App = () => {
           render={() => <BlogContainer links={links} />}
         />
       </Switch>
-      {/* <Footer /> */}
-      {/* <footer>2019</footer> */}
     </div>
   )
 }
