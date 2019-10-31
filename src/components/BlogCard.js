@@ -6,17 +6,18 @@ const BlogCard = props => {
   const { blog } = props
   const { title, link, desc, pic } = blog
   const styleItem = {
-    backgroundColor: "#e4eaf3"
+    margin: '3% 0',
+    // backgroundColor: "#e4eaf3"
   }
 
   return (
     // ! AS LIST
-    <List.Item style={{ margin: "3% 0" }}>
-      <List.Header as="h2">{title}</List.Header>
+    <List.Item style={styleItem}>
+      <Header as="h2">{title}</Header>
       <List.List>
         <List.Description>{desc}</List.Description>
-        <List.Item as="a" href={link}>
-          Link to Post
+        <List.Item >
+          <a href={link}>Link to Post</a>
         </List.Item>
       </List.List>
       <Divider horizontal>*</Divider>
