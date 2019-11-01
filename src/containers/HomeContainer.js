@@ -51,7 +51,8 @@ const HomeContainer = props => {
                 music production 12 years ago and have come to see sound design
                 through a visual design lens which has supported my coding
                 skills. For more info, check out my{" "}
-                <a href="/projects">projects</a> & <a href="/blog">blog</a>!
+                {/* <a href="/projects">projects</a> & <a href="/blog">blog</a>! */}
+                <Link to="/projects">projects</Link> & <Link to="/blog">blog</Link>!
                 {/* FROM RESUME */}
                 {/* Full stack web developer with a passion for finding innovative
               solutions. With experience in Ruby on Rails, JavaScript, and React
