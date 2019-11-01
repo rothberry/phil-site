@@ -20,6 +20,10 @@ const HomeContainer = props => {
   // c4: '#c6aa99',
   // c5: '#3a3836',
   const styleCont = { margin: "5% 5%" }
+  const styleImage = { height: "20%", width: "20%" }
+  const styleGrid = { margin: "0% 10%" }
+  const styleList = { textAlign: "left" }
+  
   return (
     <div className="home-container">
       <Container style={styleCont}>
@@ -28,7 +32,7 @@ const HomeContainer = props => {
           circular
           centered
           alt="profile pic"
-          style={{ height: "20%", width: "20%" }}
+          style={styleImage}
           size="small"
         />
         <Header as="h1" textAlign="center">
@@ -37,7 +41,7 @@ const HomeContainer = props => {
         <Header as="h3" textAlign="center">
           Software Engineer, Ruby, JavaScript, Linux.
         </Header>
-        <Grid style={{ margin: "0% 10%" }}>
+        <Grid style={styleGrid}>
           <Grid.Row columns={3}>
             <Grid.Column width="10">
               <Header textAlign="center">About Me</Header>
@@ -52,8 +56,8 @@ const HomeContainer = props => {
                 through a visual design lens which has supported my coding
                 skills. For more info, check out my{" "}
                 {/* <a href="/projects">projects</a> & <a href="/blog">blog</a>! */}
-                <Link to="/projects">projects</Link> & <Link to="/blog">blog</Link>!
-                {/* FROM RESUME */}
+                <Link to="/projects">projects</Link> &{" "}
+                <Link to="/blog">blog</Link>!{/* FROM RESUME */}
                 {/* Full stack web developer with a passion for finding innovative
               solutions. With experience in Ruby on Rails, JavaScript, and React
               as well as a Bachelor’s in Entrepreneurial and Industrial
@@ -70,11 +74,7 @@ const HomeContainer = props => {
               <Header>
                 <p>Contact</p>{" "}
               </Header>{" "}
-              <List style={{ textAlign: "left" }} size="huge">
-                <List.Item as="a" href={links.twitter}>
-                  <Icon name="twitter" size="big" />
-                  Twitter
-                </List.Item>
+              <List style={styleList} size="huge">
                 <List.Item as="a" href={links.github}>
                   <Icon name="github" size="big" />
                   Github
@@ -82,6 +82,10 @@ const HomeContainer = props => {
                 <List.Item as="a" href={links.linkedIn}>
                   <Icon name="linkedin" size="big" />
                   LinkedIn
+                </List.Item>
+                <List.Item as="a" href={links.twitter}>
+                  <Icon name="twitter" size="big" />
+                  Twitter
                 </List.Item>
                 {/* <List.Item as="a" href={links.soundcloud}>
                 <Icon name="soundcloud" size="big" />
