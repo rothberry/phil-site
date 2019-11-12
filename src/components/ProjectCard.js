@@ -16,8 +16,8 @@ const ProjectCard = props => {
   } = props
 
   const gitLink = <a href={git}>Github Repo </a>
-  const frontLink = <a href={frontGit}>Front</a>
-  const backLink = <a href={backGit}> Back</a>
+  const frontLink = <a href={frontGit}>Front Repo</a>
+  const backLink = <a href={backGit}> Back Repo</a>
   if (!!liveDemo) {
     
   }
@@ -41,8 +41,8 @@ const ProjectCard = props => {
         {frontLink}
         {" | "}
         {backLink}
-        {" | "}
-        {liveDemoLink}
+        {/* {" | "} */}
+        {/* {liveDemoLink} */}
       </Card.Meta>
     )
   } else if (!isSplit && !!isLive) {
