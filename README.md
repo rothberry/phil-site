@@ -1,6 +1,6 @@
 # First Publish of portfolio website
 
-[Portfolio website at phil-roth.com.](phil-roth.com)
+[Portfolio website at phil-roth.com.](http://phil-roth.com)
 
 
 ## License
