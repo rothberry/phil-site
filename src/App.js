@@ -25,10 +25,10 @@ const links = {
     "https://github.com/Phil-Grace/react-project-team-lunch-frontend",
   teamLunchBack:
     "https://github.com/Phil-Grace/react-project-team-lunch-backend",
-  teamLunchLiveDemo: undefined,
+  teamLunchLiveDemo: "https://www.youtube.com/watch?v=DHcF9vscdak",
   audioPhilesFront: "https://github.com/rothberry/mod-5-audiofiles-frontend",
   audioPhilesBack: "https://github.com/rothberry/mod-5-audiofiles-backend",
-  audioPhilesLiveDemo: undefined
+  audioPhilesLiveDemo: undefined,
 }
 
 const hexColors = {
@@ -43,12 +43,12 @@ const hexColors = {
   c2: "#e4eaf3",
   c3: "#efe9e5",
   c4: "#c6aa99",
-  c5: "#3a3836"
+  c5: "#3a3836",
 }
 
 const App = () => {
   return (
-    <div className="App">
+    <div className='App'>
       <Nav hexColors={hexColors} />
       <br />
       <br />
@@ -67,7 +67,7 @@ const App = () => {
       <Switch>
         <Route
           exact
-          path="/"
+          path='/'
           render={() => (
             <HomeContainer
               links={links}
@@ -78,12 +78,12 @@ const App = () => {
         />
         <Route
           exact
-          path="/projects"
+          path='/projects'
           render={() => <ProjectContainer links={links} />}
         />
         <Route
           exact
-          path="/blog"
+          path='/blog'
           render={() => <BlogContainer links={links} />}
         />
       </Switch>

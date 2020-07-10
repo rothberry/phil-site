@@ -92,7 +92,7 @@ const HomeContainer = props => {
 
                 <List.Item
                   as='a'
-                  href='https://drive.google.com/open?id=1Zg42il292S7Dfs-DptOXzJd_yOi5bg5Z'
+                  href='https://docs.google.com/presentation/d/e/2PACX-1vRoWJA2sQmwd42aV9K_Dhj2mvWjlQEvKpIxhtQTgCzGpVdoiKFQq73cNUV9nBk-a-BLOfDVE7uLllQy/pub?start=false&loop=false&delayms=3000'
                   download
                 >
                   <Icon name='paperclip' size='big' />
