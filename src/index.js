@@ -5,10 +5,13 @@ import "./index.css"
 import App from "./App"
 import { BrowserRouter as Router } from "react-router-dom"
 import * as serviceWorker from "./serviceWorker"
+import ContextProvider from "./context/Context"
 
 ReactDOM.render(
   <Router>
-    <App />
+    <ContextProvider>
+      <App />
+    </ContextProvider>
   </Router>,
   document.getElementById("root")
 )

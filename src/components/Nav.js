@@ -1,82 +1,50 @@
 /*eslint-disable */
-import React, { Component } from "react"
-import { Menu, Icon, Container } from "semantic-ui-react"
-import { withRouter } from "react-router-dom"
+import React, { useContext } from "react"
+import { Menu, Image } from "semantic-ui-react"
+import { NavLink } from "react-router-dom"
+import { Context } from "../context/Context"
+// import berryPic from "../images/rothberry.ico"
 
-class Nav extends Component {
-  state = {
-    activeItem: ""
+const Nav = () => {
+  const { profColors } = useContext(Context)
+  const styleNav = {
+    fontFamily: "Courier New",
+    backgroundColor: profColors[1],
+    color: profColors[0],
   }
-
-  componentDidMount() {
-    this.setState({activeItem: this.props.location.pathname.slice(1)})
+  const activeStyle = {
+    backgroundColor: profColors[2],
+    color: profColors[1],
   }
-
-  handleItemClick = (e, { name }) => {
-    this.setState({ activeItem: name })
-    this.props.history.push(`/${name}`)
-  }
-
-  //? c1: '#ffffff',
-  //? c2: '#e4eaf3',
-  //? c3: '#efe9e5',
-  //? c4: '#c6aa99',
-  //? c5: '#3a3836',
-
-  render() {
-    const { activeItem } = this.state
-    const styleNav = {
-      height: "5%",
-      fontFamily: "Courier New",
-      backgroundColor: "#3a3836"
-    }
-    const styleHome = {}
-    return (
-      <Menu fixed="top" size="large" style={styleNav} inverted>
-        <Container>
-          <Menu.Item
-            as="a"
-            header
-            name=""
-            align="center"
-            active={activeItem === ""}
-            onClick={this.handleItemClick}
-            style={styleHome}
-          >
-            Phil Roth
-          </Menu.Item>
-          <Menu.Item
-            position="right"
-            as="a"
-            header
-            name="projects"
-            active={activeItem === "projects"}
-            onClick={this.handleItemClick}
-          >
+  return (
+    // TODO Add foldable on mobile?
+    <Menu fixed='top' size='large' style={styleNav} inverted tabular>
+      <Menu.Item header name='home'>
+        <NavLink to='/'>
+          {/* <Image src={berryPic} size='mini' /> */}
+          Phil Roth
+        </NavLink>
+      </Menu.Item>
+      <Menu.Menu position='right'>
+        <NavLink to='/projects' activeStyle={activeStyle}>
+          <Menu.Item header name='projects'>
             Projects
           </Menu.Item>
-          <Menu.Item
-            as="a"
-            header
-            name="blog"
-            active={activeItem === "blog"}
-            onClick={this.handleItemClick}
-          >
+        </NavLink>
+        <NavLink to='/blog' activeStyle={activeStyle}>
+          <Menu.Item header name='blog'>
             Blog
           </Menu.Item>
-          {/* <Menu.Item
-            as="a"
-            header
-            name="resume"
-            active={activeItem === "resume"}
-            onClick={this.handleItemClick}
-          >
+        </NavLink>
+        {/*TODO Resume Link? */}
+        <NavLink to='/resume' activeStyle={activeStyle}>
+          <Menu.Item header name='resume'>
             Resume
-          </Menu.Item> */}
-        </Container>
-      </Menu>
-    )
-  }
+          </Menu.Item>
+        </NavLink>
+      </Menu.Menu>
+    </Menu>
+  )
 }
 
-export default withRouter(Nav)
+export default Nav

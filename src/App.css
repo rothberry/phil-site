@@ -1,16 +1,12 @@
 body {
-  font-family: 'Courier New', Courier, monospace;
-  background: #efe9e5;
+  font-family: "Courier New", Courier, monospace;
+  background: #edf5e1;
 }
 
 .App {
   text-align: left;
 }
 /* 
-.App-logo {
-  height: 40vmin;
-} */
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -20,7 +16,7 @@ body {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #09d3ac;

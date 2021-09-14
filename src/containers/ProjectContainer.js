@@ -1,46 +1,27 @@
 /*eslint-disable */
-import React from "react"
+import React, { useContext } from "react"
 import { Card, Header, Divider, Container } from "semantic-ui-react"
 import ProjectCard from "../components/ProjectCard"
 import retroJSPic from "../images/retroJS.png"
 import audioPhilesPic from "../images/audioPhiles.png"
-// const audioPhilesPic =
-//   "https://library.kissclipart.com/20180919/pww/kissclipart-sound-wave-vector-clipart-sound-wave-79091298684b3993.png"
 import teamLunchPic from "../images/teamLunchOne.png"
+import { Context } from "../context/Context"
 
-const projectDetails = {
-  retroJS: {
-    name: "RetroJS",
-    desc:
-      "A recreation of the game Pong made to play with 2 players on one keyboard."
-  },
-  audioPhiles: {
-    name: "AudioPhiles",
-    desc:
-      "A peer to peer audio sample sharing app with a visual representation of the uploaded audio samples."
-  },
-  teamLunch: {
-    name: "Team Lunch Roulette",
-    desc:
-      "Choose where to go for lunch at random by choosing a location and food preference."
-  }
-}
+const ProjectContainer = () => {
+  const { links, projectDetails } = useContext(Context)
 
-const ProjectContainer = props => {
-  const { links } = props
-  const styleCardGroup = { margin: "1% 7%" }
   const styleCont = { margin: "1% 10%" }
+
   return (
-    <Container className="project-container" style={styleCont}>
-      <Header textAlign="center" size='huge'>
+    <Container className='project-container' style={styleCont}>
+      <Header textAlign='center' size='huge'>
         Projects
       </Header>
       <Card.Group
-        className="project-group"
+        className='project-group'
         itemsPerRow={2}
-        textAlign="center"
+        textAlign='center'
         centered
-        // style={styleCardGroup}
       >
         {/* RETROJS */}
         <ProjectCard
@@ -76,7 +57,7 @@ const ProjectContainer = props => {
         />
       </Card.Group>
       <br />
-      <Divider horizontal>*</Divider>
+      <Divider horizontal>+</Divider>
     </Container>
   )
 }

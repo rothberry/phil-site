@@ -13,46 +13,46 @@ import seratoImg from "../images/tech_images/seratoImg.png"
 export const imageData = [
   {
     tech_name: "React",
-    tech_img: reactImg
+    tech_img: reactImg,
   },
   {
     tech_name: "Redux",
-    tech_img: reduxImg
+    tech_img: reduxImg,
   },
   {
     tech_name: "JavaScript",
-    tech_img: jsImg
+    tech_img: jsImg,
   },
   {
     tech_name: "CSS",
-    tech_img: cssImg
+    tech_img: cssImg,
   },
   {
     tech_name: "HTML5",
-    tech_img: html5Img
+    tech_img: html5Img,
   },
   {
     tech_name: "Ruby",
-    tech_img: rubyImg
+    tech_img: rubyImg,
   },
   {
     tech_name: "Rails",
-    tech_img: railsImg
+    tech_img: railsImg,
   },
   {
     tech_name: "Git",
-    tech_img: gitImg
+    tech_img: gitImg,
   },
   {
     tech_name: "PostgreSQL",
-    tech_img: postgresqlImg
+    tech_img: postgresqlImg,
   },
   {
     tech_name: "Ableton Live",
-    tech_img: abletonImg
+    tech_img: abletonImg,
   },
   {
     tech_name: "Serato",
-    tech_img: seratoImg
-  }
+    tech_img: seratoImg,
+  },
 ]
