@@ -6,6 +6,7 @@ import retroJSPic from "../images/retroJS.png"
 import audioPhilesPic from "../images/audioPhiles.png"
 import teamLunchPic from "../images/teamLunchOne.png"
 import { Context } from "../context/Context"
+import { imageData } from "../context/imageData"
 
 const ProjectContainer = () => {
   const { links, projectDetails } = useContext(Context)
@@ -23,15 +24,6 @@ const ProjectContainer = () => {
         textAlign='center'
         centered
       >
-        {/* RETROJS */}
-        <ProjectCard
-          details={projectDetails.retroJS}
-          pic={retroJSPic}
-          git={links.retroJSGit}
-          isSplit={false}
-          isLive={true}
-          liveApp={links.retroJSLiveApp}
-        />
         {/* AUDIOPHILES */}
         <ProjectCard
           details={projectDetails.audioPhiles}
@@ -42,6 +34,24 @@ const ProjectContainer = () => {
           isLive={false}
           // liveApp={}
           liveDemo={links.audioPhilesLiveDemo}
+        />
+        {/* RETROJS */}
+        <ProjectCard
+          details={projectDetails.retroJS}
+          pic={retroJSPic}
+          git={links.retroJSGit}
+          isSplit={false}
+          isLive={true}
+          liveApp={links.retroJSLiveApp}
+        />
+        {/* py-term-helpers */}
+        <ProjectCard
+          details={projectDetails.pyTermHelpers}
+          pic={imageData[1].tech_img}
+          git={links.pyTermGit}
+          isSplit={false}
+          isLive={true}
+          liveApp={links.pyTermLiveApp}
         />
 
         {/* TEAM LUNCH */}

@@ -3,17 +3,16 @@ import React, { useContext } from "react"
 import { Context } from "../context/Context"
 
 const ResumeContainer = () => {
-  const {
-    links: { resume },
-  } = useContext(Context)
+	const {
+		links: { resume },
+	} = useContext(Context)
 
-  // ? Resume px => 800 x 1035
-  const resumeStyle = { height: "1035px", width: "100%", overflow: "auto" }
-  return (
-    <div className='resume-container'>
-      <iframe id='resume-frame' src={resume} style={resumeStyle}></iframe>
-    </div>
-  )
+	return (
+		<div className="resume-div">
+			<iframe id="resume-frame" src={resume}></iframe>
+			{/* <iframe id='resume-frame' src={"../assets/resume.pdf"} style={resumeStyle}></iframe> */}
+		</div>
+	)
 }
 
 export default ResumeContainer

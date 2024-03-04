@@ -1,5 +1,5 @@
 import reactImg from "../images/tech_images/reactImg.png"
-import reduxImg from "../images/tech_images/reduxImg.png"
+// import reduxImg from "../images/tech_images/reduxImg.png"
 import jsImg from "../images/tech_images/jsImg.png"
 import cssImg from "../images/tech_images/cssImg.png"
 import html5Img from "../images/tech_images/html5Img.png"
@@ -9,6 +9,8 @@ import gitImg from "../images/tech_images/gitImg.png"
 import postgresqlImg from "../images/tech_images/postgresqlImg.png"
 import abletonImg from "../images/tech_images/abletonImg.png"
 import seratoImg from "../images/tech_images/seratoImg.png"
+import pythonImg from "../images/tech_images/python.png"
+
 
 export const imageData = [
   {
@@ -16,8 +18,8 @@ export const imageData = [
     tech_img: reactImg,
   },
   {
-    tech_name: "Redux",
-    tech_img: reduxImg,
+    tech_name: "Python",
+    tech_img: pythonImg,
   },
   {
     tech_name: "JavaScript",
