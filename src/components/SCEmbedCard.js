@@ -1,3 +1,4 @@
+/*eslint-disable */
 import React, { useContext } from "react"
 import { Card } from "semantic-ui-react"
 import { Context } from "../context/Context"
