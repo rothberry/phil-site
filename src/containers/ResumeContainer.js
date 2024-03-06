@@ -1,5 +1,5 @@
 /*eslint-disable */
-import React, { useContext } from "react"
+import React, { useContext, useRef, useState } from "react"
 import { Context } from "../context/Context"
 
 const ResumeContainer = () => {
@@ -9,7 +9,10 @@ const ResumeContainer = () => {
 
 	return (
 		<div className="resume-div">
-			<iframe id="resume-frame" src={resume}></iframe>
+			<iframe
+				id="resume-frame"
+				src={resume}
+			></iframe>
 			{/* <iframe id='resume-frame' src={"../assets/resume.pdf"} style={resumeStyle}></iframe> */}
 		</div>
 	)

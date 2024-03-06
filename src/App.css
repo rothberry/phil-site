@@ -54,12 +54,12 @@ body {
 
 .resume-div {
 	display: block;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
+	text-align: center;
 }
 
 .resume-div > iframe {
-	width: 100%;
+	/* DOESN'T stretch to fit?? */
+	/* width: fit-content; */
+	width: 850px;
 	height: 100vh;
 }
