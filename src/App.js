@@ -7,6 +7,7 @@ import HomeContainer from "./containers/HomeContainer"
 import ProjectContainer from "./containers/ProjectContainer"
 import BlogContainer from "./containers/BlogContainer"
 import ResumeContainer from "./containers/ResumeContainer"
+import ExtrasContainer from "./containers/ExtrasContainer"
 import { Context } from "./context/Context"
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
         <Route exact path='/projects' component={ProjectContainer} />
         <Route exact path='/blog' component={BlogContainer} />
         <Route exact path='/resume' component={ResumeContainer} />
+        <Route exact path='/extras' component={ExtrasContainer} />
       </Switch>
     </div>
   )

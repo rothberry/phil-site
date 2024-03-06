@@ -1,10 +1,10 @@
 body {
-  font-family: "Courier New", Courier, monospace;
-  background: #edf5e1;
+	font-family: "Courier New", Courier, monospace;
+	background: #edf5e1;
 }
 
 .App {
-  text-align: left;
+	text-align: left;
 }
 /* 
 .App-header {
@@ -19,5 +19,47 @@ body {
 } */
 
 .App-link {
-  color: #09d3ac;
+	color: #09d3ac;
+}
+
+.embeded-sc {
+	font-size: 10px;
+	color: #cccccc;
+	line-break: anywhere;
+	word-break: normal;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+		Garuda, Verdana, Tahoma, sans-serif;
+	font-weight: 100;
+}
+
+.embeded-audius {
+	font-size: 10px;
+	/* color: #cccccc; */
+	/* line-break: anywhere; */
+	/* word-break: normal; */
+	/* overflow: hidden; */
+	/* white-space: nowrap; */
+	/* text-overflow: ellipsis; */
+	/* font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif; */
+	/* font-weight: 100; */
+}
+
+.embededStyleLink {
+	color: #cccccc;
+	text-decoration: none;
+}
+
+.resume-div {
+	display: block;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.resume-div > iframe {
+	width: 100%;
+	height: 100vh;
 }

@@ -42,6 +42,11 @@ const Nav = () => {
             Resume
           </Menu.Item>
         </NavLink>
+        <NavLink to='/extras' activeStyle={activeStyle}>
+          <Menu.Item header name='extras'>
+            Extra Fun
+          </Menu.Item>
+        </NavLink>
       </Menu.Menu>
     </Menu>
   )
