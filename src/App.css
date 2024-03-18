@@ -52,14 +52,11 @@ body {
 	text-decoration: none;
 }
 
-.resume-div {
+.resume-frame {
 	display: block;
+	border-style: none;
+	margin: auto;
+	width: 836px;
+	height: 1035px;
 	text-align: center;
-}
-
-.resume-div > iframe {
-	/* DOESN'T stretch to fit?? */
-	/* width: fit-content; */
-	width: 850px;
-	height: 100vh;
 }
