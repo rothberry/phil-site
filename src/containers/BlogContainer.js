@@ -20,7 +20,7 @@ const BlogContainer = () => {
       {/* AS CARDS */}
       <Card.Group
         className='blog-list-container'
-        itemsPerRow={2}
+        itemsPerRow={1}
         // style={styleBlog}
         centered
         textAlign='center'
