@@ -36,11 +36,11 @@ const Nav = () => {
             Resume
           </Menu.Item>
         </NavLink>
-        <NavLink to='/blog' activeStyle={activeStyle}>
+        {/* <NavLink to='/blog' activeStyle={activeStyle}>
           <Menu.Item header name='blog'>
             Blogs
           </Menu.Item>
-        </NavLink>
+        </NavLink> */}
         <NavLink to='/extras' activeStyle={activeStyle}>
           <Menu.Item header name='extras'>
             Extra Fun
