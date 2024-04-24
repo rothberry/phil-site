@@ -10,18 +10,17 @@ const BlogContainer = () => {
   const mappedBlogList = blogList.map((blog) => {
     return <BlogCard blog={blog} />
   })
-  const styleCont = { margin: "1% 10%" }
+  const styleCont = { padding: "1% 10%" }
 
   return (
-    <Container className='blog-container' style={styleCont}>
+    <Container className='blog-container' >
       <Header size='huge' textAlign='center'>
         Blog Posts
       </Header>
       {/* AS CARDS */}
       <Card.Group
         className='blog-list-container'
-        itemsPerRow={2}
-        // style={styleBlog}
+        itemsPerRow={1}
         centered
         textAlign='center'
       >

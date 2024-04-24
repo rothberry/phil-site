@@ -8,6 +8,8 @@ import ProjectContainer from "./containers/ProjectContainer"
 import BlogContainer from "./containers/BlogContainer"
 import ResumeContainer from "./containers/ResumeContainer"
 import { Context } from "./context/Context"
+import { Footer } from "./components/Footer"
+import { Container } from "semantic-ui-react"
 
 const App = () => {
   const { profColors } = useContext(Context)
@@ -16,7 +18,7 @@ const App = () => {
     backgroundColor: profColors[4],
   }
   return (
-    <div className='App' style={appStyle}>
+    <Container className='App' style={appStyle} fluid>
       <Nav />
       <br />
       <br />
@@ -27,7 +29,8 @@ const App = () => {
         <Route exact path='/blog' component={BlogContainer} />
         <Route exact path='/resume' component={ResumeContainer} />
       </Switch>
-    </div>
+      <Footer />
+    </Container>
   )
 }
 

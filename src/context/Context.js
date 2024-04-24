@@ -29,11 +29,11 @@ const ContextProvider = (props) => {
     twitter: "https://twitter.com/rothberry_",
     linkedIn: "https://www.linkedin.com/in/philroth77/",
     github: "https://github.com/rothberry",
-    website: "phil-roth.com",
+    website: "phil-roth.dev",
     blog: "https://medium.com/@phil.roth077",
     gmail: "mailto:phil.roth077@gmail.com",
     resume:
-      "https://drive.google.com/file/d/1CROsr0muTL8Vls4T-lbeiIdA5XCkU4ej/preview?usp=sharing",
+      "https://drive.google.com/file/d/1wUebXzd4f_1uS7I79DNs55Z_2wWvYGvF/view?usp=sharing",
     retroJSLiveApp: "https://retrojs-frontend.herokuapp.com/",
     retroJSGit: "https://github.com/christianalim/retroJS",
     teamLunchFront:
@@ -65,7 +65,7 @@ const ContextProvider = (props) => {
     {
       link: "https://medium.com/@phil.roth077/a-simple-guide-to-jwt-authorization-6efd62f71237",
       title: "A Simple guide to JWT Authorization",
-      desc: "Walkthrough of what a JSON Web Token is and how to use it on the client-side.",
+      desc: "Walkthrough of what a JSON Web Token is and how to use JWTs on the client-side.",
       pic: "",
     },
     {

@@ -109,8 +109,6 @@ const HomeContainer = () => {
           </Grid.Row>
         </Grid>
       </Container>
-      <br />
-      <Divider horizontal>*</Divider>
     </div>
   )
 }
