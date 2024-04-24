@@ -21,6 +21,7 @@ const BlogContainer = () => {
       <Card.Group
         className='blog-list-container'
         itemsPerRow={1}
+        // style={styleBlog}
         centered
         textAlign='center'
       >

@@ -8,15 +8,9 @@ const ResumeContainer = () => {
 	} = useContext(Context)
 
 	// ? Resume px => 800 x 1035
-	const resumeStyle = {
-		height: "100vh",
-		width: "100%",
-		overflow: "auto",
-		padding: "2%",
-	}
 	return (
 		<div className="resume-container">
-			<iframe id="resume-frame" src={resume} style={resumeStyle}></iframe>
+			<iframe className="resume-frame" src={resume}></iframe>
 		</div>
 	)
 }

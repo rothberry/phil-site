@@ -31,15 +31,19 @@ const Nav = () => {
             Projects
           </Menu.Item>
         </NavLink>
-        <NavLink to='/blog' activeStyle={activeStyle}>
-          <Menu.Item header name='blog'>
-            Blog
-          </Menu.Item>
-        </NavLink>
-        {/*TODO Resume Link? */}
         <NavLink to='/resume' activeStyle={activeStyle}>
           <Menu.Item header name='resume'>
             Resume
+          </Menu.Item>
+        </NavLink>
+        <NavLink to='/blog' activeStyle={activeStyle}>
+          <Menu.Item header name='blog'>
+            Blogs
+          </Menu.Item>
+        </NavLink>
+        <NavLink to='/extras' activeStyle={activeStyle}>
+          <Menu.Item header name='extras'>
+            Extra Fun
           </Menu.Item>
         </NavLink>
       </Menu.Menu>
