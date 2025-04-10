@@ -13,7 +13,7 @@ import { Link } from "react-router-dom"
 import TechCard from "../components/TechCard"
 import { imageData } from "../context/imageData.js"
 import { Context } from "../context/Context"
-import profPic from "../images/prof-pic.jpg"
+import profPic from "../images/prof-pic-1.jpg"
 
 const HomeContainer = () => {
   const { links } = useContext(Context)
